@@ -1,0 +1,14 @@
+### Execute ###
+#docker-compose -f postgres_docker-compose.yml up -d
+version: '2'
+services:
+  postgres:
+    image: postgres:9.6-alpine
+    hostname: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=liquibase-db
+      - POSTGRES_USER=elfz
+      - POSTGRES_PASSWORD=elfz
+    container_name: postgres

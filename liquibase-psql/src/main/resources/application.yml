@@ -1,0 +1,19 @@
+project:
+  name: aprofundando-no-liquibase
+
+spring:
+  application:
+    name: ${project.name}
+  datasource:
+    url: jdbc:postgresql://localhost/liquibase-db
+    username: elfz
+    password: elfz
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+
+
